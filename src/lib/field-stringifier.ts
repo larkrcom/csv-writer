@@ -1,10 +1,10 @@
-import {Field} from './record';
+import { Field } from './record';
 
 const DEFAULT_FIELD_DELIMITER = ',';
-const VALID_FIELD_DELIMITERS = [DEFAULT_FIELD_DELIMITER, ';'];
+const VALID_FIELD_DELIMITERS = [DEFAULT_FIELD_DELIMITER, ';', '|'];
 
 export abstract class FieldStringifier {
-    constructor(public readonly fieldDelimiter: string) {}
+    constructor(public readonly fieldDelimiter: string) { }
 
     abstract stringify(value?: Field): string;
 
